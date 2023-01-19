@@ -5,7 +5,7 @@
 
 <h3>Popular Movies</h3>
 
-<div class="popular-movies">
+<div data-sveltekit-preload-data class="popular-movies">
 	{#each movies as movie}
 		<MovieCard {movie} />
 	{/each}

@@ -1,11 +1,15 @@
 <script>
+	import {fly} from 'svelte/transition'
 	export let data;
 	const movieDetail = data?.movieDetail?.data;
 </script>
 
-<div class="movie-details">
+<div in:fly={{ duration: 500}} class="movie-details">
 	<div class="img-container">
-		<img src={'https://image.tmdb.org/t/p/original' + movieDetail.backdrop_path} alt={movieDetail.title} />
+		<img
+			src={'https://image.tmdb.org/t/p/original' + movieDetail.backdrop_path}
+			alt={movieDetail.title}
+		/>
 	</div>
 
 	<div class="txt-container">
@@ -19,9 +23,9 @@
 			<span>Release Date:</span>
 			{movieDetail.release_date} <br />
 			<span>Budget:</span>
-			${movieDetail.budget}
+			${movieDetail.budget} <br />
 			<span>Rating:</span>
-			{movieDetail.vote_average}
+			{movieDetail.vote_average} <br />
 			<span>Runtime:</span>
 			{movieDetail.runtime} mins
 		</p>
@@ -30,7 +34,7 @@
 
 <style>
 	h1 {
-		padding: 1rem 0rem 2rem;
+		padding: 1rem 0rem 0rem;
 	}
 
 	p {
@@ -41,10 +45,10 @@
 		width: 100%;
 	}
 
-    img {
-        width: 100%;
+	img {
+		width: 100%;
 		border-radius: 1rem;
-    }
+	}
 
 	.movie-details {
 		margin: 2rem 20%;

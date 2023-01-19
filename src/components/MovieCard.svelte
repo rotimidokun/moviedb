@@ -1,6 +1,5 @@
 <script>
 	export let movie;
-	// console.log(movie);
 </script>
 
 <div class="movie-card">
@@ -19,8 +18,6 @@
 		width: 100%;
         border-radius: 0.8rem;
         margin-bottom: 1rem;
-        /* height: 30vh; */
-        /* object-fit: cover; */
 	}
 
     h2 {
