@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    export let data;
+    import PopularMovies from '../components/PopularMovies.svelte'
+    import SearchMovies from '../components/SearchMovies.svelte';
+    import '../global.css'
+</script>
+
+
+<section>
+    <SearchMovies />
+    <PopularMovies movies={data.movies} />
+</section>
